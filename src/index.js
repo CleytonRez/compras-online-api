@@ -6,4 +6,5 @@ app.use(express.json())
 
 comprasControllers(app)
 
+
 app.listen(3000)

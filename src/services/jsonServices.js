@@ -1,5 +1,4 @@
 import fs, { read } from "fs";
-import { stringify } from "querystring";
 import util from "util";
 
 const readFile = util.promisify(fs.readFile)
@@ -39,6 +38,7 @@ export const createCompra = async (compraCreate) => {
     } catch (e) {
         console.log(e.message)
     }
+    return compraCreate.id
 }
 
 export const updateCompra = async (compraUpdate) => {
@@ -46,7 +46,7 @@ export const updateCompra = async (compraUpdate) => {
         const file = await readFile(path, 'utf8')
 
         const parseJSON = JSON.parse(file)
-        console.log("PARSEJSON-CREATE:", parseJSON)
+        console.log("PARSEJSON-UPDATE:", parseJSON)
 
         const newListCompra = parseJSON.data.map((compra) => {
             if (compra.id === compraUpdate.id) {
@@ -65,6 +65,7 @@ export const updateCompra = async (compraUpdate) => {
     } catch (e) {
         console.log(e.message)
     }
+    return compraUpdate.id
 }
 
 export const deleteCompra = async (id) => {
