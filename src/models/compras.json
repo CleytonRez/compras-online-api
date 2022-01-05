@@ -1,1 +1,22 @@
-{"data":[{"nome":"Arroz","quantidade":3,"valorTotal":20,"id":61}]}
+{
+    "data": [
+        {
+            "nome": "Pão de Forma",
+            "quantidade": 2,
+            "valor": 10,
+            "id": 1
+        },
+        {
+            "nome": "Arroz",
+            "quantidade": 3,
+            "valor": 20,
+            "id": 85
+        },
+        {
+            "nome": "Halo",
+            "quantidade": "20",
+            "valor": 0,
+            "id": 68
+        }
+    ]
+}

@@ -19,7 +19,7 @@ export default (app) => {
             console.log(body)
             const idCreateCompra = await createCompra(body)
 
-            response: idCreateCompra
+            response.json(idCreateCompra)
         })
 
         app.put('/compras/:id', async (request, response) => {
@@ -28,7 +28,7 @@ export default (app) => {
             body.id = Number(id)
             const idUpdateCompra = await updateCompra(body)
 
-            response: idUpdateCompra
+            response.json(idUpdateCompra)
         })
 
         app.delete('/compras/:id', async (request, response) => {
@@ -36,7 +36,7 @@ export default (app) => {
 
             const idDeleteCompra = await deleteCompra(id)
 
-            response: idDeleteCompra
+            response.json(idDeleteCompra)
         })
 
     }
